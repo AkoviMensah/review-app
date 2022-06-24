@@ -1,14 +1,15 @@
 import './App.css';
 import Header from './components/Header'
+import Review from './components/Review';
 
 function App() {
   return (
     <>
-    <Header bgColor='red' textColor='blue'/>
+    <Header />
     <div className="container">
-      <h1>feedback</h1>
+      <h1 >feedback</h1>
     </div>
-    
+    <Review/>    
     </>
     
   );
