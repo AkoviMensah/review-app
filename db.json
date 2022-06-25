@@ -1,0 +1,9 @@
+{
+    "Reviews": [
+        {
+            "id": 1,
+            "rating": 10,
+            "text": "The Item from the Backend server. Mock db table for now"
+        }
+    ]
+}
