@@ -19,4 +19,15 @@ export const ReviewsProvider = ({ children }) => {
         setIsLoading(false);
     }
 
+    return (
+        <ReviewsContext.Provider value={{
+            reviews,
+            isLoading
+        }}>
+            {children}
+        </ReviewsContext.Provider>
+    )
+
 }
+
+export default ReviewsContext;
