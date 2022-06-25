@@ -1,10 +1,11 @@
 import { createContext, useState, useEffect } from "react";
 
-//const ReviewsContext = createContext();
+const ReviewsContext = createContext();
 
 export const ReviewsProvider = ({ children }) => {
 
     const [reviews, setReviews] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
 
@@ -12,10 +13,10 @@ export const ReviewsProvider = ({ children }) => {
 
 
     const fetchReviews = async () => {  
-        const response = await fetch('http://localhost:5000/reviews?_sort=id&_order=desc');
+        const response = await fetch('/reviews?_sort=id&_order=desc');
         const data = await response.json();
         setReviews(data);
-
+        setIsLoading(false);
     }
 
 }
