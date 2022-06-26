@@ -1,9 +1,9 @@
 {
-    "Reviews": [
-        {
-            "id": 1,
-            "rating": 10,
-            "text": "The Item from the Backend server. Mock db table for now"
-        }
-    ]
+  "Feedback": [
+    {
+      "text": "This is the review 1. Customer",
+      "rating": 2,
+      "id": 1
+    }
+  ]
 }

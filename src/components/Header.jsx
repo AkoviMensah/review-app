@@ -1,29 +1,35 @@
-import PropType from 'prop-types';
-function Header( {text, bgColor, textColor}) {
-  const styles_header = {
-    backgroundColor: bgColor,
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+function Header({ text, bgColor, textColor }) {
+  const headerStyles = {
     color: textColor,
-  };
+    backgroundColor: bgColor,
+  }
 
   return (
-    <header style={styles_header}>
+    <header style={headerStyles}>
       <div className='container'>
-        <h2>{text}</h2>
+        <Link to='/' style={{ textDecoration: "none", color: "#ff6a95" }}>
+          <h2>{text}</h2>
+        </Link>
       </div>
     </header>
   );
-};
+}
 
 Header.defaultProps = {
-    text: "My app UI",
-    bgColor: "rgba(0,0,0,0.4)",
-    textColor: "#ff6a95",
-};
+  text: "Reviews",
+  textColor: "#ff6a95",
+  bgColor: "rgba(0,0,0,0.4)",
+  
+}
 
-Header.propType = {
-    text: PropType.string,
-    bgColor: PropType.string,
-    textColor: PropType.string,
-};
+Header.propTypes = {
+  text: PropTypes.string,
+  textColor: PropTypes.string,
+  bgColor: PropTypes.string,
+  
+}
 
 export default Header;
