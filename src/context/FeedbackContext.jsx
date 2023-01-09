@@ -4,7 +4,7 @@ const FeedbackContext = createContext();
 
 export const FeedbackProvider = ({ children }) => {
   const [feedback, setFeedback] = useState([]);
-  const [feedbackEdit, setFeedbackEdit] = useState({item: {}, edit: false,});
+  const [feedbackEdit, setFeedbackEdit] = useState({ item: {}, edit: false, });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const FeedbackProvider = ({ children }) => {
   }
 
   const deleteFeedback = async (id) => {
-    if (window.confirm('Click Ok to confirm')) {
+    if (window.confirm('Click Ok to Delete')) {
       await fetch(`/feedback/${id}`, { method: 'DELETE' });
 
       setFeedback(feedback.filter((item) => item.id !== id));

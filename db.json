@@ -1,9 +1,3 @@
 {
-  "Feedback": [
-    {
-      "text": "This is the review 1. Customer",
-      "rating": 2,
-      "id": 1
-    }
-  ]
+  "Feedback": []
 }
